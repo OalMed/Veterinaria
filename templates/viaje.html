@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+    {% block content %}
+
+        <h2>Costo de un viaje de estudios</h2> <br> <br>
+
+        <form action="/costo" method="post">
+            <label for="alumnos">Cantidad de alumnos:</label>
+            <input type="number" name="alumnos" id="alumnos" min="1" max="99" value="{{al}}" required> 
+            <br><br> <br>
+            <input type="submit" id="calc" value="Calcular">
+        </form>
+
+        <br><br>
+        <h4>{{msj}}</h4>
+
+    {% endblock %}

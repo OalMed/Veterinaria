@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+    {% block content %}
+
+        <h2>Gestión de calificaciones</h2> <br> <br>
+
+        <form action="/calificacion" method="post">
+            <label for="calif">Calificación:</label>
+            <input type="number" name="calif" id="calif" value="{{nt}}" required> 
+            <br><br> <br>
+            <input type="submit" id="calc" value="Calcular">
+        </form>
+
+        <br><br>
+        <h4>{{nota}}</h4>
+
+    {% endblock %}

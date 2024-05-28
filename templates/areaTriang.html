@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+    {% block content %}
+
+        <h2>Área de un triángulo</h2> <br> <br>
+
+        <form action="/areaT" method="post">
+            <label for="base">Base del triángulo:</label>
+            <input type="number" step="0.001" name="base" id="base" value="{{b}}" required> 
+            <br><br>
+            <label for="altura">Altura del triángulo:</label>
+            <input type="number" step="0.001" name="altura" id="altura" value="{{h}}" required> 
+            <br><br><br>
+            <input type="submit" id="calc" value="Calcular">
+        </form>
+
+        <br><br>
+        <h4>{{msj}} </h4>
+
+    {% endblock %}

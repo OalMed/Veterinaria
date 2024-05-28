@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+    {% block content %}
+
+        <h2>Tabla de multiplicar</h2> <br> <br>
+
+        <form action="/tabla" method="post">
+            <label for="num">Número a multiplicar:</label>
+            <input type="number" name="num" id="num" min="2" max="10" value="{{n}}" required> 
+            <br><br> <br>
+            <input type="submit" id="calc" value="Calcular">
+        </form>
+
+        <br><br>
+
+        <h4>{{msj}}</h4>
+        <center><table>
+            {% for y in tab %}
+                <tr>
+                    <td>{{y}}</td>
+                </tr>
+            {% endfor %}
+        </table></center>
+
+    {% endblock %}

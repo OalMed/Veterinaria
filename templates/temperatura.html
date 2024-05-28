@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+    {% block content %}
+
+        <h2>Conversión de grados Fahrenheit a Celsius</h2> <br> <br>
+
+        <form action="/grados" method="post">
+            <label for="faren">Grados Fahrenheit:</label>
+            <input type="number" step="0.001" name="faren" id="faren" value="{{f}}" required> 
+            <br><br> <br>
+            <input type="submit" id="calc" value="Calcular">
+        </form>
+
+        <br><br>
+        <h4>{{msj}}</h4>
+
+    {% endblock %}
